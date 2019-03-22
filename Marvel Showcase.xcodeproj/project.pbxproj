@@ -13,6 +13,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A6A08AA2244D778002DC0C9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		2A6A08AB2244D778002DC0C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2AB15A012246915C00A84C6C /* Marvel Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB15A042246915C00A84C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB15A0B2246915C00A84C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,10 +52,12 @@
 		2AB15A032246915C00A84C6C /* Marvel Showcase */ = {
 			isa = PBXGroup;
 			children = (
+				2A6A08AB2244D778002DC0C9 /* README.md */,
 				2AB15A042246915C00A84C6C /* AppDelegate.swift */,
 				2AB15A0B2246915C00A84C6C /* Assets.xcassets */,
 				2AB15A0D2246915C00A84C6C /* LaunchScreen.storyboard */,
 				2AB15A102246915C00A84C6C /* Info.plist */,
+				2A6A08AA2244D778002DC0C9 /* .gitignore */,
 			);
 			path = "Marvel Showcase";
 			sourceTree = "<group>";
