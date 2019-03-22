@@ -1,0 +1,12 @@
+{
+    "available": 1,
+    "collectionURI": "http://gateway.marvel.com/v1/public/comics/25582/creators",
+    "items": [
+        {
+            "resourceURI": "http://gateway.marvel.com/v1/public/creators/23",
+            "name": "David Mack",
+            "role": "penciller (cover)"
+        }
+    ],
+    "returned": 1
+}

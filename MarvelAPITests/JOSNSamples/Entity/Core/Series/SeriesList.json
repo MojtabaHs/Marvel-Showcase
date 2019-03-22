@@ -1,0 +1,11 @@
+{
+    "available": 3,
+    "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/series",
+    "items": [
+        {
+            "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
+            "name": "Avengers: The Initiative (2007 - 2010)"
+        }
+    ],
+    "returned": 1
+}
