@@ -14,6 +14,10 @@
 		2A6A097022462A3E002DC0C9 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096A22462A3E002DC0C9 /* JSONParser.swift */; };
 		2A6A097122462A3E002DC0C9 /* HTTPResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096B22462A3E002DC0C9 /* HTTPResponseHandler.swift */; };
 		2A6A097222462A3E002DC0C9 /* HTTPRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096C22462A3E002DC0C9 /* HTTPRequestHandler.swift */; };
+		2A6A097A22462EFD002DC0C9 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A097622462EFD002DC0C9 /* RequestManager.swift */; };
+		2A6A097B22462EFD002DC0C9 /* ResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A097722462EFD002DC0C9 /* ResponseManager.swift */; };
+		2A6A097C22462EFD002DC0C9 /* WebserviceManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A097822462EFD002DC0C9 /* WebserviceManger.swift */; };
+		2A6A097D22462EFD002DC0C9 /* JSONParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A097922462EFD002DC0C9 /* JSONParsingManager.swift */; };
 		2AB15A052246915C00A84C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB15A042246915C00A84C6C /* AppDelegate.swift */; };
 		2AB15A0C2246915C00A84C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0B2246915C00A84C6C /* Assets.xcassets */; };
 		2AB15A0F2246915C00A84C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0D2246915C00A84C6C /* LaunchScreen.storyboard */; };
@@ -31,6 +35,10 @@
 		2A6A096A22462A3E002DC0C9 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		2A6A096B22462A3E002DC0C9 /* HTTPResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseHandler.swift; sourceTree = "<group>"; };
 		2A6A096C22462A3E002DC0C9 /* HTTPRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestHandler.swift; sourceTree = "<group>"; };
+		2A6A097622462EFD002DC0C9 /* RequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
+		2A6A097722462EFD002DC0C9 /* ResponseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseManager.swift; sourceTree = "<group>"; };
+		2A6A097822462EFD002DC0C9 /* WebserviceManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManger.swift; sourceTree = "<group>"; };
+		2A6A097922462EFD002DC0C9 /* JSONParsingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParsingManager.swift; sourceTree = "<group>"; };
 		2AB15A012246915C00A84C6C /* Marvel Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB15A042246915C00A84C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB15A0B2246915C00A84C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +67,7 @@
 		2A6A096022462A00002DC0C9 /* WebserviceHandler */ = {
 			isa = PBXGroup;
 			children = (
+				2A6A097522462EFD002DC0C9 /* WebserviceManager */,
 				2A6A096722462A3D002DC0C9 /* HTTPWebserviceHandler.swift */,
 				2A6A097422462AC5002DC0C9 /* RequestHandler */,
 				2A6A097322462ABC002DC0C9 /* ResponseHandler */,
@@ -85,6 +94,17 @@
 				2A6A096822462A3E002DC0C9 /* HTTPRequestRouter.swift */,
 			);
 			path = RequestHandler;
+			sourceTree = "<group>";
+		};
+		2A6A097522462EFD002DC0C9 /* WebserviceManager */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A097622462EFD002DC0C9 /* RequestManager.swift */,
+				2A6A097722462EFD002DC0C9 /* ResponseManager.swift */,
+				2A6A097822462EFD002DC0C9 /* WebserviceManger.swift */,
+				2A6A097922462EFD002DC0C9 /* JSONParsingManager.swift */,
+			);
+			path = WebserviceManager;
 			sourceTree = "<group>";
 		};
 		2AB159F82246915C00A84C6C = {
@@ -231,9 +251,13 @@
 			files = (
 				2A6A097122462A3E002DC0C9 /* HTTPResponseHandler.swift in Sources */,
 				2A6A096E22462A3E002DC0C9 /* HTTPRequestRouter.swift in Sources */,
+				2A6A097B22462EFD002DC0C9 /* ResponseManager.swift in Sources */,
 				2A6A097222462A3E002DC0C9 /* HTTPRequestHandler.swift in Sources */,
 				2A6A096F22462A3E002DC0C9 /* JSONEncoderExtension.swift in Sources */,
+				2A6A097A22462EFD002DC0C9 /* RequestManager.swift in Sources */,
+				2A6A097C22462EFD002DC0C9 /* WebserviceManger.swift in Sources */,
 				2A6A097022462A3E002DC0C9 /* JSONParser.swift in Sources */,
+				2A6A097D22462EFD002DC0C9 /* JSONParsingManager.swift in Sources */,
 				2A6A096D22462A3E002DC0C9 /* HTTPWebserviceHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

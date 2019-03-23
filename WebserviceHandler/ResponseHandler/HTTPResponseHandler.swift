@@ -26,7 +26,7 @@ public extension HTTPResponseHandler {
     
     public var urlResponseAdapters: [ResponseAdapter] { return [] }
     
-    public func handleResponse<T: Decodable,U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void) {
+    public func handleResponse<T: Decodable, U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void) {
         
         let originalResponse = (data: data, response: response, error: error)
         

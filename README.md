@@ -9,4 +9,7 @@ Assignment asks the following:
 
 So initial project has no storyboards (except for launchscreen) . Also this projcet contains no unnecessary codes, even  in **AppDelegate** file.
 
+
+We Don't want to couple this project with third party libraries. So we implement our own *Webservice Handler framework*. This framework could be a wrapper around any third party framework we may add later.
+
 More details comming soon...
