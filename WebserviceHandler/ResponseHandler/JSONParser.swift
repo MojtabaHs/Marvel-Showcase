@@ -16,3 +16,10 @@ public protocol JSONParser {
     var jsonDecoder: JSONDecoder { get }
     func parseData<T: Decodable>(_ data: Data, to: T.Type) throws -> T
 }
+
+public extension JSONParser {
+        
+    public func parseData<T: Decodable>(_ data: Data, to: T.Type) throws -> T {
+        return try jsonDecoder.decode(T.self, from: data)
+    }
+}

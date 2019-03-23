@@ -21,3 +21,44 @@ public protocol HTTPResponseHandler {
     var urlResponseAdapters: [ResponseAdapter] { get }
     func handleResponse<T: Decodable, U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void)
 }
+
+public extension HTTPResponseHandler {
+    
+    public var urlResponseAdapters: [ResponseAdapter] { return [] }
+    
+    public func handleResponse<T: Decodable,U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void) {
+        
+        let originalResponse = (data: data, response: response, error: error)
+        
+        var adaptedResponse: (data: Data?, response: URLResponse?, error: Error?)
+        for adapter in urlResponseAdapters {
+            adaptedResponse = adapter.adaptedResponse(data: data, response: response, error: error)
+        }
+        
+        // Mark: Adapt and check error
+        let error = adaptedResponse.error ?? originalResponse.error
+        guard error == nil else { return failure(nil, error) }
+
+        // Mark: Adapt and check response
+        let response = adaptedResponse.response ?? originalResponse.response
+        guard let httpResponse = response as? HTTPURLResponse else { return failure(nil, error) }
+        
+        // Mark: Adapt and check data
+        let data = adaptedResponse.data ?? originalResponse.data
+        var isSuccess: Bool { return (100..<400).contains(httpResponse.statusCode) }
+        guard let reponseData = data else { return isSuccess ? success(nil) : failure(nil, nil) }
+
+        do {
+            if isSuccess {
+                let result = try jsonParser.parseData(reponseData, to: T.self)
+                return success(result)
+            } else {
+                let result = try jsonParser.parseData(reponseData, to: U.self)
+                return failure(result, error)
+            }
+        } catch {
+            return failure(nil, error)
+        }
+        
+    }
+}

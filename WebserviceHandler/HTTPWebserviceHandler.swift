@@ -22,3 +22,18 @@ public protocol HTTPWebserviceHandler {
         success: @escaping (T?) -> Void,
         failure: @escaping (U?, Error?) -> Void) throws -> URLSessionDataTask
 }
+
+public extension HTTPWebserviceHandler {
+    
+    func request<T: Decodable, U: Decodable>(
+        urlRequestable: URLRequestable,
+        success: @escaping (T?) -> Void = { _ in },
+        failure: @escaping (U?, Error?) -> Void = { _,_ in }) throws -> URLSessionDataTask {
+        
+        return try requestHandler.resumeDataTask(
+            urlRequestable: urlRequestable,
+            completionHandler: { (data, response, error) in
+                self.responseHandler.handleResponse(data: data, response: response, error: error, success: success, failure: failure)
+        })
+    }
+}

@@ -21,3 +21,27 @@ public protocol HTTPRequestHandler {
     var urlRequestAdapters: [URLRequestAdapter] { get }
     func resumeDataTask(urlRequestable: URLRequestable, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) throws -> URLSessionDataTask
 }
+
+public extension HTTPRequestHandler {
+    public var urlRequestAdapters: [URLRequestAdapter] { return [] }
+    
+    public func resumeDataTask(urlRequestable: URLRequestable, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) throws -> URLSessionDataTask {
+        
+        let originalURLRequest = try urlRequestable.urlRequest()
+        
+        var adaptedURLRequest: URLRequest?
+        for adapter in urlRequestAdapters {
+            adaptedURLRequest = adapter.adaptedURLRequest(from: originalURLRequest)
+        }
+        
+        let request = adaptedURLRequest ?? originalURLRequest
+        
+        let task = urlSession.dataTask(
+            with: request,
+            completionHandler: completionHandler
+        )
+        task.resume()
+        
+        return task
+    }
+}
