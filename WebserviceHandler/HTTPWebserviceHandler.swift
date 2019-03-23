@@ -17,7 +17,7 @@ public protocol HTTPWebserviceHandler {
     var requestHandler: HTTPRequestHandler { get }
     var responseHandler: HTTPResponseHandler { get }
     
-    func request<T: Decodable, U: Decodable>(
+    func resumeDataTask<T: Decodable, U: Decodable>(
         urlRequestable: URLRequestable,
         success: @escaping (T?) -> Void,
         failure: @escaping (U?, Error?) -> Void) throws -> URLSessionDataTask
@@ -25,7 +25,7 @@ public protocol HTTPWebserviceHandler {
 
 public extension HTTPWebserviceHandler {
     
-    func request<T: Decodable, U: Decodable>(
+    func resumeDataTask<T: Decodable, U: Decodable>(
         urlRequestable: URLRequestable,
         success: @escaping (T?) -> Void = { _ in },
         failure: @escaping (U?, Error?) -> Void = { _,_ in }) throws -> URLSessionDataTask {
