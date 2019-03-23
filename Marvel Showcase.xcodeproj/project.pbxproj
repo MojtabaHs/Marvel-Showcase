@@ -39,6 +39,14 @@
 		2A6A09352244EBDF002DC0C9 /* ComicSummary.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A6A09192244EBDF002DC0C9 /* ComicSummary.json */; };
 		2A6A09362244EBDF002DC0C9 /* CharacterSummary.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A6A091A2244EBDF002DC0C9 /* CharacterSummary.json */; };
 		2A6A09382244EBDF002DC0C9 /* Character.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A6A091C2244EBDF002DC0C9 /* Character.json */; };
+		2A6A094822461F9A002DC0C9 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A094422461F99002DC0C9 /* Container.swift */; };
+		2A6A094922461F9A002DC0C9 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A094522461F9A002DC0C9 /* Error.swift */; };
+		2A6A094A22461F9A002DC0C9 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A094622461F9A002DC0C9 /* Wrapper.swift */; };
+		2A6A094B22461F9A002DC0C9 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A094722461F9A002DC0C9 /* Result.swift */; };
+		2A6A095322462013002DC0C9 /* Error.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A6A094F22462013002DC0C9 /* Error.json */; };
+		2A6A095422462013002DC0C9 /* Container.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A6A095022462013002DC0C9 /* Container.json */; };
+		2A6A095522462013002DC0C9 /* InvalidCredentialsError.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A6A095122462013002DC0C9 /* InvalidCredentialsError.json */; };
+		2A6A095622462013002DC0C9 /* Wrapper.json in Resources */ = {isa = PBXBuildFile; fileRef = 2A6A095222462013002DC0C9 /* Wrapper.json */; };
 		2AB15A052246915C00A84C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB15A042246915C00A84C6C /* AppDelegate.swift */; };
 		2AB15A0C2246915C00A84C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0B2246915C00A84C6C /* Assets.xcassets */; };
 		2AB15A0F2246915C00A84C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0D2246915C00A84C6C /* LaunchScreen.storyboard */; };
@@ -111,6 +119,14 @@
 		2A6A09192244EBDF002DC0C9 /* ComicSummary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ComicSummary.json; sourceTree = "<group>"; };
 		2A6A091A2244EBDF002DC0C9 /* CharacterSummary.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CharacterSummary.json; sourceTree = "<group>"; };
 		2A6A091C2244EBDF002DC0C9 /* Character.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Character.json; sourceTree = "<group>"; };
+		2A6A094422461F99002DC0C9 /* Container.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		2A6A094522461F9A002DC0C9 /* Error.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Error.swift; sourceTree = "<group>"; };
+		2A6A094622461F9A002DC0C9 /* Wrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
+		2A6A094722461F9A002DC0C9 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2A6A094F22462013002DC0C9 /* Error.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Error.json; sourceTree = "<group>"; };
+		2A6A095022462013002DC0C9 /* Container.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Container.json; sourceTree = "<group>"; };
+		2A6A095122462013002DC0C9 /* InvalidCredentialsError.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InvalidCredentialsError.json; sourceTree = "<group>"; };
+		2A6A095222462013002DC0C9 /* Wrapper.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Wrapper.json; sourceTree = "<group>"; };
 		2AB15A012246915C00A84C6C /* Marvel Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB15A042246915C00A84C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB15A0B2246915C00A84C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -148,6 +164,7 @@
 		2A6A08B22244D9A5002DC0C9 /* MarvelAPI */ = {
 			isa = PBXGroup;
 			children = (
+				2A6A094C22461FA5002DC0C9 /* Result */,
 				2A6A08BE2244DAB9002DC0C9 /* Entities */,
 				2A6A08B32244D9A5002DC0C9 /* MarvelAPI.h */,
 				2A6A08B42244D9A5002DC0C9 /* Info.plist */,
@@ -289,9 +306,64 @@
 		2A6A09432244F694002DC0C9 /* JOSNSamples */ = {
 			isa = PBXGroup;
 			children = (
+				2A6A095922462037002DC0C9 /* Result */,
 				2A6A09402244ED72002DC0C9 /* Entity */,
 			);
 			path = JOSNSamples;
+			sourceTree = "<group>";
+		};
+		2A6A094C22461FA5002DC0C9 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A094722461F9A002DC0C9 /* Result.swift */,
+				2A6A094D22461FB3002DC0C9 /* Successful */,
+				2A6A094E22461FD6002DC0C9 /* Failure */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		2A6A094D22461FB3002DC0C9 /* Successful */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A094422461F99002DC0C9 /* Container.swift */,
+				2A6A094622461F9A002DC0C9 /* Wrapper.swift */,
+			);
+			path = Successful;
+			sourceTree = "<group>";
+		};
+		2A6A094E22461FD6002DC0C9 /* Failure */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A094522461F9A002DC0C9 /* Error.swift */,
+			);
+			path = Failure;
+			sourceTree = "<group>";
+		};
+		2A6A09572246201E002DC0C9 /* Successful */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A095022462013002DC0C9 /* Container.json */,
+				2A6A095222462013002DC0C9 /* Wrapper.json */,
+			);
+			path = Successful;
+			sourceTree = "<group>";
+		};
+		2A6A095822462026002DC0C9 /* Failure */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A094F22462013002DC0C9 /* Error.json */,
+			);
+			path = Failure;
+			sourceTree = "<group>";
+		};
+		2A6A095922462037002DC0C9 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A09572246201E002DC0C9 /* Successful */,
+				2A6A095822462026002DC0C9 /* Failure */,
+				2A6A095122462013002DC0C9 /* InvalidCredentialsError.json */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 		2AB159F82246915C00A84C6C = {
@@ -454,14 +526,18 @@
 				2A6A09312244EBDF002DC0C9 /* SeriesSummary.json in Resources */,
 				2A6A092C2244EBDF002DC0C9 /* CharacterList.json in Resources */,
 				2A6A09342244EBDF002DC0C9 /* StorySummary.json in Resources */,
+				2A6A095422462013002DC0C9 /* Container.json in Resources */,
 				2A6A09242244EBDF002DC0C9 /* TextObject.json in Resources */,
 				2A6A09352244EBDF002DC0C9 /* ComicSummary.json in Resources */,
 				2A6A09302244EBDF002DC0C9 /* ComicList.json in Resources */,
+				2A6A095622462013002DC0C9 /* Wrapper.json in Resources */,
 				2A6A092F2244EBDF002DC0C9 /* StoryList.json in Resources */,
 				2A6A09332244EBDF002DC0C9 /* EventSummary.json in Resources */,
 				2A6A092B2244EBDF002DC0C9 /* CreatorList.json in Resources */,
 				2A6A09292244EBDF002DC0C9 /* Image.json in Resources */,
+				2A6A095322462013002DC0C9 /* Error.json in Resources */,
 				2A6A092D2244EBDF002DC0C9 /* EventList.json in Resources */,
+				2A6A095522462013002DC0C9 /* InvalidCredentialsError.json in Resources */,
 				2A6A09322244EBDF002DC0C9 /* CreatorSummary.json in Resources */,
 				2A6A09212244EBDF002DC0C9 /* URL.json in Resources */,
 				2A6A09382244EBDF002DC0C9 /* Character.json in Resources */,
@@ -485,14 +561,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A6A08CE2244DAB9002DC0C9 /* Character.swift in Sources */,
+				2A6A094822461F9A002DC0C9 /* Container.swift in Sources */,
 				2A6A08D42244DAB9002DC0C9 /* Image.swift in Sources */,
+				2A6A094922461F9A002DC0C9 /* Error.swift in Sources */,
 				2A6A08D32244DAB9002DC0C9 /* ResourceList.swift in Sources */,
 				2A6A08CF2244DAB9002DC0C9 /* Comic.swift in Sources */,
+				2A6A094B22461F9A002DC0C9 /* Result.swift in Sources */,
 				2A6A08D22244DAB9002DC0C9 /* Entity.swift in Sources */,
 				2A6A08D52244DAB9002DC0C9 /* URL.swift in Sources */,
 				2A6A08CD2244DAB9002DC0C9 /* Event.swift in Sources */,
 				2A6A08D62244DAB9002DC0C9 /* TextObject.swift in Sources */,
 				2A6A08CC2244DAB9002DC0C9 /* Creator.swift in Sources */,
+				2A6A094A22461F9A002DC0C9 /* Wrapper.swift in Sources */,
 				2A6A08D02244DAB9002DC0C9 /* Series.swift in Sources */,
 				2A6A08D12244DAB9002DC0C9 /* Story.swift in Sources */,
 			);
