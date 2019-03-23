@@ -34,7 +34,89 @@ class MarvelAPITests: XCTestCase {
     
     
     
-    // MARK: - Common
+    // MARK: -
+    // MARK: - Result
+    
+    
+    lazy var invalidCredentialsError = Result<Entity.Core.Character>.Error(
+        code: 401,
+        status: "Invalid Credentials Error"
+    )
+    
+    func testDecodingInvalidCredentialsError() {
+        XCTAssertInequalityCheck(desiredObject: invalidCredentialsError, jsonWithName: "InvalidCredentialsError")
+    }
+    
+    
+    
+    // MARK: - Successful
+    
+    lazy var successResult = MarvelAPI.Result<Entity.Core.Character>.success(wrapper)
+    
+    func testDecodingSuccessResult() {
+        XCTAssertEqualityCheck(desiredObject: successResult, jsonWithName: "Wrapper")
+    }
+    
+    
+    
+    // MARK: - Wrapper
+    
+    lazy var wrapper = Result<Entity.Core.Character>.Wrapper<Entity.Core.Character>(
+        code: 200,
+        status: "Ok",
+        data: container,
+        etag: "fefdcded0bb2610e13c9df075f805a913f1daa6c",
+        copyright: "© 2019 MARVEL",
+        attributionText: "Data provided by Marvel. © 2019 MARVEL",
+        attributionHTML: "<a href=\"http://marvel.com\">Data provided by Marvel. © 2019 MARVEL</a>"
+    )
+    
+    func testDecodingWrapper() {
+        XCTAssertEqualityCheck(desiredObject: container, jsonWithName: "Container")
+    }
+    
+    
+    
+    // MARK: - Container
+    
+    lazy var container = Result<Entity.Core.Character>.Container<Entity.Core.Character>(
+        offset: 0,
+        limit: 20,
+        total: 1491,
+        count: 20,
+        results: [character])
+    
+    func testDecodingContainer() {
+        XCTAssertEqualityCheck(desiredObject: container, jsonWithName: "Container")
+    }
+    
+    
+    
+    // MARK: - Failure
+    
+    lazy var errorResult = MarvelAPI.Result<Entity.Core.Character>.failure(error)
+    
+    func testDecodingErrorResult() {
+        XCTAssertEqualityCheck(desiredObject: errorResult, jsonWithName: "Error")
+    }
+    
+    
+    
+    // MARK: - Error
+    
+    lazy var error = Result<Entity.Core.Character>.Error(
+        code: 409,
+        status: "You must pass an integer limit greater than 0."
+    )
+    
+    func testDecodingError() {
+        XCTAssertEqualityCheck(desiredObject: error, jsonWithName: "Error")
+    }
+    
+    
+    
+    // MARK: -
+    // MARK: - Common Entities
     
     
     
@@ -78,7 +160,8 @@ class MarvelAPITests: XCTestCase {
     
     
     
-    // MARK: - Core
+    // MARK: -
+    // MARK: - Core Entities
     
     
     
@@ -271,7 +354,7 @@ class MarvelAPITests: XCTestCase {
 }
 
 
-
+// MARK: -d
 // MARK: - Helper extesnsion
 
 extension MarvelAPITests {
@@ -280,15 +363,31 @@ extension MarvelAPITests {
         return bundle.path(forResource: name, ofType: "json")
     }
     
+    func decode<T: Decodable & Equatable>(to type: T.Type, jsonWithName name: String) throws -> T {
+        guard let path = pathToJSON(name: name) else { fatalError("Test file not found") }
+        let json = try String(contentsOfFile: path)
+        guard let jsonData = json.data(using: .utf8) else { fatalError("Invalid test file") }
+        
+        let decodedTestFile = try josnDecoder.decode(T.self, from: jsonData)
+        return decodedTestFile
+    }
+    
     func XCTAssertEqualityCheck<T: Decodable & Equatable>(desiredObject: T, jsonWithName name: String) {
-        guard let path = pathToJSON(name: name) else { return XCTFail("Test file not found") }
         do {
-            let json = try String(contentsOfFile: path)
-            guard let jsonData = json.data(using: .utf8) else { return XCTFail("Invalid test file") }
-            
-            let decodedTestFile = try josnDecoder.decode(T.self, from: jsonData)
+            let decodedTestFile = try decode(to: T.self, jsonWithName: name)
             
             XCTAssert(decodedTestFile == desiredObject)
+            
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func XCTAssertInequalityCheck<T: Decodable & Equatable>(desiredObject: T, jsonWithName name: String) {
+        do {
+            let decodedTestFile = try decode(to: T.self, jsonWithName: name)
+            
+            XCTAssert(decodedTestFile != desiredObject)
             
         } catch {
             XCTFail(error.localizedDescription)
