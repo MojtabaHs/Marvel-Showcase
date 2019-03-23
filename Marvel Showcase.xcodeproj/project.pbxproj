@@ -187,6 +187,7 @@
 		2A6A09C922466CDB002DC0C9 /* StoriesOfCharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesOfCharacterEndpoint.swift; sourceTree = "<group>"; };
 		2A6A09CA22466CDB002DC0C9 /* ComicsOfCharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsOfCharacterEndpoint.swift; sourceTree = "<group>"; };
 		2A6A09CB22466CDB002DC0C9 /* SeriesOfCharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesOfCharacterEndpoint.swift; sourceTree = "<group>"; };
+		2A6A09D522466E84002DC0C9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2AB15A012246915C00A84C6C /* Marvel Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB15A042246915C00A84C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB15A0B2246915C00A84C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -591,6 +592,7 @@
 		2AB15A032246915C00A84C6C /* Marvel Showcase */ = {
 			isa = PBXGroup;
 			children = (
+				2A6A09D522466E84002DC0C9 /* LICENSE */,
 				2A6A08AB2244D778002DC0C9 /* README.md */,
 				2AB15A042246915C00A84C6C /* AppDelegate.swift */,
 				2AB15A0B2246915C00A84C6C /* Assets.xcassets */,

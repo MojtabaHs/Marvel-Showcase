@@ -2,7 +2,7 @@
 //  Result.swift
 //  MarvelAPI
 //
-//  Created by Seyed Mojtaba Hosseini Zeidabadi on 3/20/19.
+//  Created by Seyed Mojtaba Hosseini Zeidabadi on 3/23/19.
 //  Copyright © 2019 Chenzook. All rights reserved.
 //
 //  Linkedin: https://linkedin.com/in/MojtabaHosseini
