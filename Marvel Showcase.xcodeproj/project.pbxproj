@@ -60,6 +60,10 @@
 		2A6A097D22462EFD002DC0C9 /* JSONParsingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A097922462EFD002DC0C9 /* JSONParsingManager.swift */; };
 		2A6A099722466778002DC0C9 /* HTTPRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A099022466778002DC0C9 /* HTTPRequestRouter.swift */; };
 		2A6A099B22466778002DC0C9 /* WebserviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A099422466778002DC0C9 /* WebserviceManager.swift */; };
+		2A6A09A1224669E6002DC0C9 /* Hasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A099D224669E6002DC0C9 /* Hasher.swift */; };
+		2A6A09A2224669E6002DC0C9 /* RequestAuthenticationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A099E224669E6002DC0C9 /* RequestAuthenticationAdapter.swift */; };
+		2A6A09A3224669E6002DC0C9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A099F224669E6002DC0C9 /* Secrets.swift */; };
+		2A6A09A4224669E6002DC0C9 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09A0224669E6002DC0C9 /* Authentication.swift */; };
 		2AB15A052246915C00A84C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB15A042246915C00A84C6C /* AppDelegate.swift */; };
 		2AB15A0C2246915C00A84C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0B2246915C00A84C6C /* Assets.xcassets */; };
 		2AB15A0F2246915C00A84C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0D2246915C00A84C6C /* LaunchScreen.storyboard */; };
@@ -155,6 +159,10 @@
 		2A6A097922462EFD002DC0C9 /* JSONParsingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParsingManager.swift; sourceTree = "<group>"; };
 		2A6A099022466778002DC0C9 /* HTTPRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestRouter.swift; sourceTree = "<group>"; };
 		2A6A099422466778002DC0C9 /* WebserviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceManager.swift; sourceTree = "<group>"; };
+		2A6A099D224669E6002DC0C9 /* Hasher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hasher.swift; sourceTree = "<group>"; };
+		2A6A099E224669E6002DC0C9 /* RequestAuthenticationAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAuthenticationAdapter.swift; sourceTree = "<group>"; };
+		2A6A099F224669E6002DC0C9 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		2A6A09A0224669E6002DC0C9 /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		2AB15A012246915C00A84C6C /* Marvel Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB15A042246915C00A84C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB15A0B2246915C00A84C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +209,7 @@
 			children = (
 				2A6A099422466778002DC0C9 /* WebserviceManager.swift */,
 				2A6A099022466778002DC0C9 /* HTTPRequestRouter.swift */,
+				2A6A09A5224669F6002DC0C9 /* Authentication */,
 				2A6A094C22461FA5002DC0C9 /* Result */,
 				2A6A08BE2244DAB9002DC0C9 /* Entities */,
 				2A6A08B32244D9A5002DC0C9 /* MarvelAPI.h */,
@@ -446,6 +455,17 @@
 			path = WebserviceManager;
 			sourceTree = "<group>";
 		};
+		2A6A09A5224669F6002DC0C9 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A099F224669E6002DC0C9 /* Secrets.swift */,
+				2A6A099D224669E6002DC0C9 /* Hasher.swift */,
+				2A6A09A0224669E6002DC0C9 /* Authentication.swift */,
+				2A6A099E224669E6002DC0C9 /* RequestAuthenticationAdapter.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		2AB159F82246915C00A84C6C = {
 			isa = PBXGroup;
 			children = (
@@ -681,6 +701,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A6A08CE2244DAB9002DC0C9 /* Character.swift in Sources */,
+				2A6A09A3224669E6002DC0C9 /* Secrets.swift in Sources */,
 				2A6A094822461F9A002DC0C9 /* Container.swift in Sources */,
 				2A6A099B22466778002DC0C9 /* WebserviceManager.swift in Sources */,
 				2A6A08D42244DAB9002DC0C9 /* Image.swift in Sources */,
@@ -693,10 +714,13 @@
 				2A6A08D52244DAB9002DC0C9 /* URL.swift in Sources */,
 				2A6A08CD2244DAB9002DC0C9 /* Event.swift in Sources */,
 				2A6A08D62244DAB9002DC0C9 /* TextObject.swift in Sources */,
+				2A6A09A4224669E6002DC0C9 /* Authentication.swift in Sources */,
 				2A6A08CC2244DAB9002DC0C9 /* Creator.swift in Sources */,
 				2A6A094A22461F9A002DC0C9 /* Wrapper.swift in Sources */,
 				2A6A08D02244DAB9002DC0C9 /* Series.swift in Sources */,
+				2A6A09A1224669E6002DC0C9 /* Hasher.swift in Sources */,
 				2A6A08D12244DAB9002DC0C9 /* Story.swift in Sources */,
+				2A6A09A2224669E6002DC0C9 /* RequestAuthenticationAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
