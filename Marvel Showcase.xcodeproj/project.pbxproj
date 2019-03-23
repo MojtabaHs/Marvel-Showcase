@@ -70,6 +70,12 @@
 		2A6A09C222466B52002DC0C9 /* EventsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09BB22466B52002DC0C9 /* EventsRouter.swift */; };
 		2A6A09C322466B52002DC0C9 /* SeriessRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09BD22466B52002DC0C9 /* SeriessRouter.swift */; };
 		2A6A09C422466B52002DC0C9 /* StoriesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09BF22466B52002DC0C9 /* StoriesRouter.swift */; };
+		2A6A09CD22466CDB002DC0C9 /* EventsOfCharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09C622466CDB002DC0C9 /* EventsOfCharacterEndpoint.swift */; };
+		2A6A09CE22466CDB002DC0C9 /* CharactersEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09C722466CDB002DC0C9 /* CharactersEndpoint.swift */; };
+		2A6A09CF22466CDB002DC0C9 /* CharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09C822466CDB002DC0C9 /* CharacterEndpoint.swift */; };
+		2A6A09D022466CDB002DC0C9 /* StoriesOfCharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09C922466CDB002DC0C9 /* StoriesOfCharacterEndpoint.swift */; };
+		2A6A09D122466CDB002DC0C9 /* ComicsOfCharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09CA22466CDB002DC0C9 /* ComicsOfCharacterEndpoint.swift */; };
+		2A6A09D222466CDB002DC0C9 /* SeriesOfCharacterEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A09CB22466CDB002DC0C9 /* SeriesOfCharacterEndpoint.swift */; };
 		2AB15A052246915C00A84C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB15A042246915C00A84C6C /* AppDelegate.swift */; };
 		2AB15A0C2246915C00A84C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0B2246915C00A84C6C /* Assets.xcassets */; };
 		2AB15A0F2246915C00A84C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0D2246915C00A84C6C /* LaunchScreen.storyboard */; };
@@ -175,6 +181,12 @@
 		2A6A09BB22466B52002DC0C9 /* EventsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsRouter.swift; sourceTree = "<group>"; };
 		2A6A09BD22466B52002DC0C9 /* SeriessRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriessRouter.swift; sourceTree = "<group>"; };
 		2A6A09BF22466B52002DC0C9 /* StoriesRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesRouter.swift; sourceTree = "<group>"; };
+		2A6A09C622466CDB002DC0C9 /* EventsOfCharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsOfCharacterEndpoint.swift; sourceTree = "<group>"; };
+		2A6A09C722466CDB002DC0C9 /* CharactersEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersEndpoint.swift; sourceTree = "<group>"; };
+		2A6A09C822466CDB002DC0C9 /* CharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterEndpoint.swift; sourceTree = "<group>"; };
+		2A6A09C922466CDB002DC0C9 /* StoriesOfCharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoriesOfCharacterEndpoint.swift; sourceTree = "<group>"; };
+		2A6A09CA22466CDB002DC0C9 /* ComicsOfCharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsOfCharacterEndpoint.swift; sourceTree = "<group>"; };
+		2A6A09CB22466CDB002DC0C9 /* SeriesOfCharacterEndpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesOfCharacterEndpoint.swift; sourceTree = "<group>"; };
 		2AB15A012246915C00A84C6C /* Marvel Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB15A042246915C00A84C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB15A0B2246915C00A84C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -483,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				2A6A09A722466AE8002DC0C9 /* CharactersRouter.swift */,
+				2A6A09D422466CE5002DC0C9 /* Endpoints */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -538,6 +551,19 @@
 				2A6A09BE22466B52002DC0C9 /* Stories */,
 			);
 			path = Routers;
+			sourceTree = "<group>";
+		};
+		2A6A09D422466CE5002DC0C9 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A09C722466CDB002DC0C9 /* CharactersEndpoint.swift */,
+				2A6A09C822466CDB002DC0C9 /* CharacterEndpoint.swift */,
+				2A6A09CA22466CDB002DC0C9 /* ComicsOfCharacterEndpoint.swift */,
+				2A6A09C622466CDB002DC0C9 /* EventsOfCharacterEndpoint.swift */,
+				2A6A09CB22466CDB002DC0C9 /* SeriesOfCharacterEndpoint.swift */,
+				2A6A09C922466CDB002DC0C9 /* StoriesOfCharacterEndpoint.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		2AB159F82246915C00A84C6C = {
@@ -776,11 +802,14 @@
 			files = (
 				2A6A08CE2244DAB9002DC0C9 /* Character.swift in Sources */,
 				2A6A09C222466B52002DC0C9 /* EventsRouter.swift in Sources */,
+				2A6A09CD22466CDB002DC0C9 /* EventsOfCharacterEndpoint.swift in Sources */,
 				2A6A09C422466B52002DC0C9 /* StoriesRouter.swift in Sources */,
 				2A6A09A3224669E6002DC0C9 /* Secrets.swift in Sources */,
+				2A6A09D222466CDB002DC0C9 /* SeriesOfCharacterEndpoint.swift in Sources */,
 				2A6A094822461F9A002DC0C9 /* Container.swift in Sources */,
 				2A6A099B22466778002DC0C9 /* WebserviceManager.swift in Sources */,
 				2A6A08D42244DAB9002DC0C9 /* Image.swift in Sources */,
+				2A6A09CE22466CDB002DC0C9 /* CharactersEndpoint.swift in Sources */,
 				2A6A099722466778002DC0C9 /* HTTPRequestRouter.swift in Sources */,
 				2A6A09C122466B52002DC0C9 /* ComicsRouter.swift in Sources */,
 				2A6A094922461F9A002DC0C9 /* Error.swift in Sources */,
@@ -794,9 +823,12 @@
 				2A6A08D52244DAB9002DC0C9 /* URL.swift in Sources */,
 				2A6A08CD2244DAB9002DC0C9 /* Event.swift in Sources */,
 				2A6A08D62244DAB9002DC0C9 /* TextObject.swift in Sources */,
+				2A6A09CF22466CDB002DC0C9 /* CharacterEndpoint.swift in Sources */,
 				2A6A09A4224669E6002DC0C9 /* Authentication.swift in Sources */,
 				2A6A08CC2244DAB9002DC0C9 /* Creator.swift in Sources */,
+				2A6A09D022466CDB002DC0C9 /* StoriesOfCharacterEndpoint.swift in Sources */,
 				2A6A094A22461F9A002DC0C9 /* Wrapper.swift in Sources */,
+				2A6A09D122466CDB002DC0C9 /* ComicsOfCharacterEndpoint.swift in Sources */,
 				2A6A08D02244DAB9002DC0C9 /* Series.swift in Sources */,
 				2A6A09A1224669E6002DC0C9 /* Hasher.swift in Sources */,
 				2A6A08D12244DAB9002DC0C9 /* Story.swift in Sources */,
