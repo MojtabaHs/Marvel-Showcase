@@ -1,8 +1,8 @@
 //
 //  Error.swift
-//  MarvelStar
+//  MarvelAPI
 //
-//  Created by Seyed Mojtaba Hosseini Zeidabadi on 3/13/19.
+//  Created by Seyed Mojtaba Hosseini Zeidabadi on 3/23/19.
 //  Copyright © 2019 Chenzook. All rights reserved.
 //
 //  Linkedin: https://linkedin.com/in/MojtabaHosseini
