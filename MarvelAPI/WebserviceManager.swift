@@ -30,6 +30,7 @@ public extension WebserviceManager {
     
     public static let shared: WebserviceManager = {
         let requestManager = RequestManager.default
+        requestManager.urlRequestAdapters = [RequestAuthenticationAdapter.shared]
 
         let webserviceManager = WebserviceManager(
             requestHandler: requestManager,
