@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6A096322462A00002DC0C9 /* WebserviceHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6A096122462A00002DC0C9 /* WebserviceHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A6A096D22462A3E002DC0C9 /* HTTPWebserviceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096722462A3D002DC0C9 /* HTTPWebserviceHandler.swift */; };
+		2A6A096E22462A3E002DC0C9 /* HTTPRequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096822462A3E002DC0C9 /* HTTPRequestRouter.swift */; };
+		2A6A096F22462A3E002DC0C9 /* JSONEncoderExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096922462A3E002DC0C9 /* JSONEncoderExtension.swift */; };
+		2A6A097022462A3E002DC0C9 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096A22462A3E002DC0C9 /* JSONParser.swift */; };
+		2A6A097122462A3E002DC0C9 /* HTTPResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096B22462A3E002DC0C9 /* HTTPResponseHandler.swift */; };
+		2A6A097222462A3E002DC0C9 /* HTTPRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A096C22462A3E002DC0C9 /* HTTPRequestHandler.swift */; };
 		2AB15A052246915C00A84C6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB15A042246915C00A84C6C /* AppDelegate.swift */; };
 		2AB15A0C2246915C00A84C6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0B2246915C00A84C6C /* Assets.xcassets */; };
 		2AB15A0F2246915C00A84C6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AB15A0D2246915C00A84C6C /* LaunchScreen.storyboard */; };
@@ -15,6 +22,15 @@
 /* Begin PBXFileReference section */
 		2A6A08AA2244D778002DC0C9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		2A6A08AB2244D778002DC0C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		2A6A095F22462A00002DC0C9 /* WebserviceHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebserviceHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A6A096122462A00002DC0C9 /* WebserviceHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebserviceHandler.h; sourceTree = "<group>"; };
+		2A6A096222462A00002DC0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A6A096722462A3D002DC0C9 /* HTTPWebserviceHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPWebserviceHandler.swift; sourceTree = "<group>"; };
+		2A6A096822462A3E002DC0C9 /* HTTPRequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestRouter.swift; sourceTree = "<group>"; };
+		2A6A096922462A3E002DC0C9 /* JSONEncoderExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncoderExtension.swift; sourceTree = "<group>"; };
+		2A6A096A22462A3E002DC0C9 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		2A6A096B22462A3E002DC0C9 /* HTTPResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseHandler.swift; sourceTree = "<group>"; };
+		2A6A096C22462A3E002DC0C9 /* HTTPRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestHandler.swift; sourceTree = "<group>"; };
 		2AB15A012246915C00A84C6C /* Marvel Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marvel Showcase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB15A042246915C00A84C6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB15A0B2246915C00A84C6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -23,6 +39,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2A6A095C22462A00002DC0C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AB159FE2246915C00A84C6C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -33,10 +56,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A6A096022462A00002DC0C9 /* WebserviceHandler */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A096722462A3D002DC0C9 /* HTTPWebserviceHandler.swift */,
+				2A6A097422462AC5002DC0C9 /* RequestHandler */,
+				2A6A097322462ABC002DC0C9 /* ResponseHandler */,
+				2A6A096122462A00002DC0C9 /* WebserviceHandler.h */,
+				2A6A096222462A00002DC0C9 /* Info.plist */,
+			);
+			path = WebserviceHandler;
+			sourceTree = "<group>";
+		};
+		2A6A097322462ABC002DC0C9 /* ResponseHandler */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A096B22462A3E002DC0C9 /* HTTPResponseHandler.swift */,
+				2A6A096922462A3E002DC0C9 /* JSONEncoderExtension.swift */,
+				2A6A096A22462A3E002DC0C9 /* JSONParser.swift */,
+			);
+			path = ResponseHandler;
+			sourceTree = "<group>";
+		};
+		2A6A097422462AC5002DC0C9 /* RequestHandler */ = {
+			isa = PBXGroup;
+			children = (
+				2A6A096C22462A3E002DC0C9 /* HTTPRequestHandler.swift */,
+				2A6A096822462A3E002DC0C9 /* HTTPRequestRouter.swift */,
+			);
+			path = RequestHandler;
+			sourceTree = "<group>";
+		};
 		2AB159F82246915C00A84C6C = {
 			isa = PBXGroup;
 			children = (
 				2AB15A032246915C00A84C6C /* Marvel Showcase */,
+				2A6A096022462A00002DC0C9 /* WebserviceHandler */,
 				2AB15A022246915C00A84C6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				2AB15A012246915C00A84C6C /* Marvel Showcase.app */,
+				2A6A095F22462A00002DC0C9 /* WebserviceHandler.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,7 +120,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		2A6A095A22462A00002DC0C9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A6A096322462A00002DC0C9 /* WebserviceHandler.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		2A6A095E22462A00002DC0C9 /* WebserviceHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A6A096622462A00002DC0C9 /* Build configuration list for PBXNativeTarget "WebserviceHandler" */;
+			buildPhases = (
+				2A6A095A22462A00002DC0C9 /* Headers */,
+				2A6A095B22462A00002DC0C9 /* Sources */,
+				2A6A095C22462A00002DC0C9 /* Frameworks */,
+				2A6A095D22462A00002DC0C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebserviceHandler;
+			productName = WebserviceHandler;
+			productReference = 2A6A095F22462A00002DC0C9 /* WebserviceHandler.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		2AB15A002246915C00A84C6C /* Marvel Showcase */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AB15A132246915C00A84C6C /* Build configuration list for PBXNativeTarget "Marvel Showcase" */;
@@ -92,6 +177,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Chenzook;
 				TargetAttributes = {
+					2A6A095E22462A00002DC0C9 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
 					2AB15A002246915C00A84C6C = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -111,11 +200,19 @@
 			projectRoot = "";
 			targets = (
 				2AB15A002246915C00A84C6C /* Marvel Showcase */,
+				2A6A095E22462A00002DC0C9 /* WebserviceHandler */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2A6A095D22462A00002DC0C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AB159FF2246915C00A84C6C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -128,6 +225,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2A6A095B22462A00002DC0C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A6A097122462A3E002DC0C9 /* HTTPResponseHandler.swift in Sources */,
+				2A6A096E22462A3E002DC0C9 /* HTTPRequestRouter.swift in Sources */,
+				2A6A097222462A3E002DC0C9 /* HTTPRequestHandler.swift in Sources */,
+				2A6A096F22462A3E002DC0C9 /* JSONEncoderExtension.swift in Sources */,
+				2A6A097022462A3E002DC0C9 /* JSONParser.swift in Sources */,
+				2A6A096D22462A3E002DC0C9 /* HTTPWebserviceHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2AB159FD2246915C00A84C6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -150,6 +260,63 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		2A6A096422462A00002DC0C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WebserviceHandler/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenzook.WebserviceHandler;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2A6A096522462A00002DC0C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WebserviceHandler/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chenzook.WebserviceHandler;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		2AB15A112246915C00A84C6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -305,6 +472,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2A6A096622462A00002DC0C9 /* Build configuration list for PBXNativeTarget "WebserviceHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A6A096422462A00002DC0C9 /* Debug */,
+				2A6A096522462A00002DC0C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2AB159FC2246915C00A84C6C /* Build configuration list for PBXProject "Marvel Showcase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
