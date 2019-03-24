@@ -473,9 +473,9 @@
 		2A6A097522462EFD002DC0C9 /* WebserviceManager */ = {
 			isa = PBXGroup;
 			children = (
+				2A6A097822462EFD002DC0C9 /* WebserviceManger.swift */,
 				2A6A097622462EFD002DC0C9 /* RequestManager.swift */,
 				2A6A097722462EFD002DC0C9 /* ResponseManager.swift */,
-				2A6A097822462EFD002DC0C9 /* WebserviceManger.swift */,
 				2A6A097922462EFD002DC0C9 /* JSONParsingManager.swift */,
 			);
 			path = WebserviceManager;
