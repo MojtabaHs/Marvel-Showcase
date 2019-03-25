@@ -16,7 +16,7 @@ public class WebserviceManager: WebserviceHandler.WebserviceManager {
 
     var urlParametersEncoder = JSONEncoder()
     
-    public func request<T: HTTPRequestRouter>(
+    public func resumeDataTask<T: HTTPRequestRouter>(
         router: T,
         completion: @escaping (T.Result?) -> Void) throws -> URLSessionDataTask  {
         
