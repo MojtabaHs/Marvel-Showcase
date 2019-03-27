@@ -31,7 +31,13 @@ class NonHTTPResponseResponseAdapter: WebserviceHandler.ResponseAdapter {
         )
         
         let adaptedData = try! jsonEncoder.encode(adaptedError)
-        return (adaptedData, response, error)
+        let urlLoadingSystemErrorCodesDocumentationPath = "https://developer.apple.com/documentation/foundation/1508628-url_loading_system_error_codes"
+        let adaptedResponse = HTTPURLResponse(url: URL(string: urlLoadingSystemErrorCodesDocumentationPath)!,
+                                       statusCode: nsError.code,
+                                       httpVersion: nil,
+                                       headerFields: nil)
+        
+        return (adaptedData, adaptedResponse, nil)
     }
     
 }

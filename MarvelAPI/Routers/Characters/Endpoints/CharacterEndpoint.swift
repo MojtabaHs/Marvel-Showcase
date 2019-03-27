@@ -39,7 +39,7 @@ public extension CharactersRouter.Endpoint {
 public extension CharactersRouter.Endpoint.Character {
     
     public static func get(characterId: Int,
-                           success: @escaping (Result.Container<Entity.Core.Character>?) -> Void,
+                           success: @escaping (Entity.Core.Character?) -> Void,
                            failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         let router = CharactersRouter.Endpoint.Character(id: characterId)
@@ -48,7 +48,7 @@ public extension CharactersRouter.Endpoint.Character {
             
             switch result {
             case .success(let wrapper):
-                success(wrapper.data)
+                success(wrapper.data?.results?.first)
                 
             case .failure(let error):
                 failure(error)

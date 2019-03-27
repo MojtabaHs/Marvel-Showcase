@@ -29,12 +29,12 @@ public extension HTTPRequestHandler {
         
         let originalURLRequest = try urlRequestable.urlRequest()
         
-        var adaptedURLRequest: URLRequest?
+        var adaptedURLRequest = originalURLRequest
         for adapter in urlRequestAdapters {
-            adaptedURLRequest = adapter.adaptedURLRequest(from: originalURLRequest)
+            adaptedURLRequest = adapter.adaptedURLRequest(from: adaptedURLRequest)
         }
         
-        let request = adaptedURLRequest ?? originalURLRequest
+        let request = adaptedURLRequest
         
         let currentQueue = OperationQueue.current
         

@@ -142,6 +142,17 @@ extension CharactersCollectionViewController {
         guard let loadMoreView = view as? LoadMoreView else { return assertionFailure("Unknown footer view") }
         updateLoadMoreView(loadMoreView)
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard let selectedCharacter = characters?[indexPath.row] else { return assertionFailure("Character not found") }
+        
+        AppNavigationRouter.shared.showCharacterDetails(
+            characterId: selectedCharacter.id,
+            character: selectedCharacter,
+            rootViewController: self
+        )
+    }
 }
 
 extension CharactersCollectionViewController: UICollectionViewDelegateFlowLayout {

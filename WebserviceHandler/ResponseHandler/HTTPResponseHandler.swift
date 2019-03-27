@@ -30,21 +30,21 @@ public extension HTTPResponseHandler {
         
         let originalResponse = (data: data, response: response, error: error)
         
-        var adaptedResponse: (data: Data?, response: URLResponse?, error: Error?)
+        var adaptedResponse = originalResponse
         for adapter in responseAdapters {
             adaptedResponse = adapter.adaptedResponse(data: data, response: response, error: error)
         }
         
         // Mark: Adapt and check error
-        let error = adaptedResponse.error ?? originalResponse.error
+        let error = adaptedResponse.error
         guard error == nil else { return failure(nil, error) }
 
         // Mark: Adapt and check response
-        let response = adaptedResponse.response ?? originalResponse.response
+        let response = adaptedResponse.response
         guard let httpResponse = response as? HTTPURLResponse else { return failure(nil, error) }
         
         // Mark: Adapt and check data
-        let data = adaptedResponse.data ?? originalResponse.data
+        let data = adaptedResponse.data
         var isSuccess: Bool { return (100..<400).contains(httpResponse.statusCode) }
         guard let reponseData = data else { return isSuccess ? success(nil) : failure(nil, nil) }
 
