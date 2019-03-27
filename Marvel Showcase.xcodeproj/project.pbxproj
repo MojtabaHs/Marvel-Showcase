@@ -18,6 +18,7 @@
 		2A25AE7B224BE8A800326CCA /* SummariesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE79224BE8A800326CCA /* SummariesTableViewCell.swift */; };
 		2A25AE7C224BE8A800326CCA /* SummariesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25AE7A224BE8A800326CCA /* SummariesTableViewCell.xib */; };
 		2A25AE7E224BF0F700326CCA /* AppNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE7D224BF0F700326CCA /* AppNavigationRouter.swift */; };
+		2A25AE80224BFAD800326CCA /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE7F224BFAD800326CCA /* NavigationBarExtension.swift */; };
 		2A6A08B52244D9A5002DC0C9 /* MarvelAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6A08B32244D9A5002DC0C9 /* MarvelAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A6A08B82244D9A5002DC0C9 /* MarvelAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; };
 		2A6A08B92244D9A5002DC0C9 /* MarvelAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -165,6 +166,7 @@
 		2A25AE79224BE8A800326CCA /* SummariesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummariesTableViewCell.swift; sourceTree = "<group>"; };
 		2A25AE7A224BE8A800326CCA /* SummariesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummariesTableViewCell.xib; sourceTree = "<group>"; };
 		2A25AE7D224BF0F700326CCA /* AppNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationRouter.swift; sourceTree = "<group>"; };
+		2A25AE7F224BFAD800326CCA /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
 		2A6A08AA2244D778002DC0C9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		2A6A08AB2244D778002DC0C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -718,6 +720,7 @@
 				2A92E749224AF7AE00EDBCE3 /* CollectionViewRow.swift */,
 				2A92E739224AF6F000EDBCE3 /* StructureIdentifiable.swift */,
 				2A25AE7D224BF0F700326CCA /* AppNavigationRouter.swift */,
+				2A25AE7F224BFAD800326CCA /* NavigationBarExtension.swift */,
 				2A25AE6C224BE5AA00326CCA /* Extensions */,
 				2A25AE6A224BE59000326CCA /* CharacterTableViewController.swift */,
 				2A25AE79224BE8A800326CCA /* SummariesTableViewCell.swift */,
@@ -1015,6 +1018,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A25AE74224BE76A00326CCA /* CGFloatExtension.swift in Sources */,
+				2A25AE80224BFAD800326CCA /* NavigationBarExtension.swift in Sources */,
 				2A25AE65224BB21200326CCA /* IndexPathExtension.swift in Sources */,
 				2A92E754224AF89000EDBCE3 /* UICollectionViewExtension.swift in Sources */,
 				2A92E73B224AF6F000EDBCE3 /* CharactersCollectionViewController.swift in Sources */,
