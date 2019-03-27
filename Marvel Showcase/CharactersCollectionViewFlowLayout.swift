@@ -30,6 +30,6 @@ class CharactersCollectionViewFlowLayout: UICollectionViewFlowLayout {
         
         minimumInteritemSpacing = padding
         minimumLineSpacing = padding * 2
-        sectionInset = UIEdgeInsets(top: padding*2, left: padding, bottom: padding*2, right: padding)
+        sectionInset = UIEdgeInsets(top: padding*2, left: padding, bottom: padding, right: padding)
     }
 }

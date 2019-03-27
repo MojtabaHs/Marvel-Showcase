@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A25AE5F224B9C8900326CCA /* LoadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE5E224B9C8900326CCA /* LoadMoreView.swift */; };
+		2A25AE61224B9C9700326CCA /* LoadMoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25AE60224B9C9700326CCA /* LoadMoreView.xib */; };
+		2A25AE63224BAD2F00326CCA /* URLSessionTaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE62224BAD2F00326CCA /* URLSessionTaskExtension.swift */; };
+		2A25AE65224BB21200326CCA /* IndexPathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE64224BB21200326CCA /* IndexPathExtension.swift */; };
 		2A6A08B52244D9A5002DC0C9 /* MarvelAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6A08B32244D9A5002DC0C9 /* MarvelAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A6A08B82244D9A5002DC0C9 /* MarvelAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; };
 		2A6A08B92244D9A5002DC0C9 /* MarvelAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -143,6 +147,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A25AE5E224B9C8900326CCA /* LoadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreView.swift; sourceTree = "<group>"; };
+		2A25AE60224B9C9700326CCA /* LoadMoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreView.xib; sourceTree = "<group>"; };
+		2A25AE62224BAD2F00326CCA /* URLSessionTaskExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionTaskExtension.swift; sourceTree = "<group>"; };
+		2A25AE64224BB21200326CCA /* IndexPathExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndexPathExtension.swift; sourceTree = "<group>"; };
 		2A6A08AA2244D778002DC0C9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		2A6A08AB2244D778002DC0C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -682,7 +690,11 @@
 				2A92E751224AF87A00EDBCE3 /* NibInitializable.swift */,
 				2A92E749224AF7AE00EDBCE3 /* CollectionViewRow.swift */,
 				2A92E739224AF6F000EDBCE3 /* StructureIdentifiable.swift */,
+				2A25AE62224BAD2F00326CCA /* URLSessionTaskExtension.swift */,
+				2A25AE64224BB21200326CCA /* IndexPathExtension.swift */,
 				2A92E753224AF89000EDBCE3 /* UICollectionViewExtension.swift */,
+				2A25AE5E224B9C8900326CCA /* LoadMoreView.swift */,
+				2A25AE60224B9C9700326CCA /* LoadMoreView.xib */,
 				2A92E738224AF6F000EDBCE3 /* CharactersCollectionViewController.swift */,
 				2A92E755224AFD2F00EDBCE3 /* CharactersCollectionViewFlowLayout.swift */,
 				2A92E72A224AF6C400EDBCE3 /* CharacterOverview */,
@@ -889,6 +901,7 @@
 				2A92E74A224AF7AF00EDBCE3 /* Assets.xcassets in Resources */,
 				2A92E734224AF6C400EDBCE3 /* CharacterOverviewView.xib in Resources */,
 				2A92E731224AF6C400EDBCE3 /* RelationCountCollectionViewCell.xib in Resources */,
+				2A25AE61224B9C9700326CCA /* LoadMoreView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -970,12 +983,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A25AE65224BB21200326CCA /* IndexPathExtension.swift in Sources */,
 				2A92E754224AF89000EDBCE3 /* UICollectionViewExtension.swift in Sources */,
 				2A92E73B224AF6F000EDBCE3 /* CharactersCollectionViewController.swift in Sources */,
 				2A92E733224AF6C400EDBCE3 /* RelationCountCollectionViewFlowLayout.swift in Sources */,
 				2A92E736224AF6C400EDBCE3 /* CharacterOverviewCollectionViewCell.swift in Sources */,
+				2A25AE5F224B9C8900326CCA /* LoadMoreView.swift in Sources */,
 				2A92E735224AF6C400EDBCE3 /* RelationCountCollectionViewCell.swift in Sources */,
 				2A92E74B224AF7AF00EDBCE3 /* AppDelegate.swift in Sources */,
+				2A25AE63224BAD2F00326CCA /* URLSessionTaskExtension.swift in Sources */,
 				2A92E756224AFD3000EDBCE3 /* CharactersCollectionViewFlowLayout.swift in Sources */,
 				2A92E750224AF83B00EDBCE3 /* Entity.swift in Sources */,
 				2A92E74E224AF7AF00EDBCE3 /* CollectionViewRow.swift in Sources */,
