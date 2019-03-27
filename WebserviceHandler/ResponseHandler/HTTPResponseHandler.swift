@@ -12,19 +12,19 @@
 
 import Foundation
 
-public protocol ResponseAdapter {
+public protocol HTTPResponseAdapter {
     func adaptedResponse(data: Data?, response: URLResponse?, error: Error?) -> (data: Data?, response: URLResponse?, error: Error?)
 }
 
 public protocol HTTPResponseHandler {
     var jsonParser: JSONParser { get }
-    var urlResponseAdapters: [ResponseAdapter] { get }
+    var urlResponseAdapters: [HTTPResponseAdapter] { get }
     func handleResponse<T: Decodable, U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void)
 }
 
 public extension HTTPResponseHandler {
     
-    public var urlResponseAdapters: [ResponseAdapter] { return [] }
+    public var urlResponseAdapters: [HTTPResponseAdapter] { return [] }
     
     public func handleResponse<T: Decodable, U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void) {
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A25AE67224BC2C600326CCA /* NoneHTTPResponseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE66224BC2C600326CCA /* NoneHTTPResponseAdapter.swift */; };
 		2A6A08B52244D9A5002DC0C9 /* MarvelAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6A08B32244D9A5002DC0C9 /* MarvelAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A6A08B82244D9A5002DC0C9 /* MarvelAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; };
 		2A6A08B92244D9A5002DC0C9 /* MarvelAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -120,6 +121,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A25AE66224BC2C600326CCA /* NoneHTTPResponseAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoneHTTPResponseAdapter.swift; sourceTree = "<group>"; };
 		2A6A08AA2244D778002DC0C9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		2A6A08AB2244D778002DC0C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				2A6A099422466778002DC0C9 /* WebserviceManager.swift */,
+				2A25AE66224BC2C600326CCA /* NoneHTTPResponseAdapter.swift */,
 				2A6A099022466778002DC0C9 /* HTTPRequestRouter.swift */,
 				2A6A0A8E2247D463002DC0C9 /* Webservices */,
 				2A6A09C522466B74002DC0C9 /* Routers */,
@@ -868,6 +871,7 @@
 				2A6A09A4224669E6002DC0C9 /* Authentication.swift in Sources */,
 				2A6A08CC2244DAB9002DC0C9 /* Creator.swift in Sources */,
 				2A6A09D022466CDB002DC0C9 /* StoriesOfCharacterEndpoint.swift in Sources */,
+				2A25AE67224BC2C600326CCA /* NoneHTTPResponseAdapter.swift in Sources */,
 				2A6A094A22461F9A002DC0C9 /* Wrapper.swift in Sources */,
 				2A6A0A832247D324002DC0C9 /* CharactersWebservices.swift in Sources */,
 				2A6A09D122466CDB002DC0C9 /* ComicsOfCharacterEndpoint.swift in Sources */,

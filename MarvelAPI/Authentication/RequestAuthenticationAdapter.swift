@@ -61,9 +61,7 @@ class RequestAuthenticationAdapter: WebserviceHandler.URLRequestAdapter {
 }
 
 extension RequestAuthenticationAdapter {
-    
-    static var bundle: Bundle { return Bundle(for: self) }
-    
+        
     /// API key is public and there is no need for encryption.
     static let shared: RequestAuthenticationAdapter = {
         

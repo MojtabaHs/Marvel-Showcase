@@ -31,10 +31,13 @@ public extension WebserviceManager {
     public static let shared: WebserviceManager = {
         let requestManager = RequestManager.default
         requestManager.urlRequestAdapters = [RequestAuthenticationAdapter.shared]
+        
+        let responseManager = ResponseManager.default
+        responseManager.httpResponseAdapters = [NoneHTTPResponseResponseAdapter.shared]
 
         let webserviceManager = WebserviceManager(
             requestHandler: requestManager,
-            responseHandler: ResponseManager.default
+            responseHandler: responseManager
         )
 
         return webserviceManager
