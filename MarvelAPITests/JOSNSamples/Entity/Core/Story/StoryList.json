@@ -1,0 +1,12 @@
+{
+    "available": 21,
+    "collectionURI": "http://gateway.marvel.com/v1/public/characters/1011334/stories",
+    "items": [
+        {
+            "resourceURI": "http://gateway.marvel.com/v1/public/stories/19947",
+            "name": "Cover #19947",
+            "type": "cover"
+        }
+    ],
+    "returned": 1
+}

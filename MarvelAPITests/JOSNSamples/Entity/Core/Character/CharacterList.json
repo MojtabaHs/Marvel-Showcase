@@ -1,0 +1,11 @@
+{
+    "available": 3,
+    "collectionURI": "http://gateway.marvel.com/v1/public/comics/16230/characters",
+    "items": [
+        {
+            "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+            "name": "Captain America"
+        }
+    ],
+    "returned": 1
+}
