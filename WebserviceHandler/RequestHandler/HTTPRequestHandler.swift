@@ -36,10 +36,13 @@ public extension HTTPRequestHandler {
         
         let request = adaptedURLRequest ?? originalURLRequest
         
-        let task = urlSession.dataTask(
-            with: request,
-            completionHandler: completionHandler
-        )
+        let currentQueue = OperationQueue.current
+        
+        let task = urlSession.dataTask(with: request, completionHandler: { (data, response, error) in
+            currentQueue?.addOperation {
+                completionHandler(data, response, error)
+            }
+        })
         task.resume()
         
         return task
