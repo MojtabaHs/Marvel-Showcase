@@ -39,7 +39,7 @@ public extension CharactersRouter.Endpoint {
 public extension CharactersRouter.Endpoint.Character {
     
     public static func get(characterId: Int,
-                           success: @escaping (Result.Wrapper<Entity.Core.Character>) -> Void,
+                           success: @escaping (Result.Container<Entity.Core.Character>?) -> Void,
                            failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         let router = CharactersRouter.Endpoint.Character(id: characterId)
@@ -48,7 +48,7 @@ public extension CharactersRouter.Endpoint.Character {
             
             switch result {
             case .success(let wrapper):
-                success(wrapper)
+                success(wrapper.data)
                 
             case .failure(let error):
                 failure(error)
@@ -56,7 +56,7 @@ public extension CharactersRouter.Endpoint.Character {
         }
     }
     
-    public func get(success: @escaping (Result.Wrapper<Entity.Core.Character>) -> Void,
+    public func get(success: @escaping (Result.Container<Entity.Core.Character>?) -> Void,
                     failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         return try WebserviceManager.shared.resumeDataTask(router: self) { result in
@@ -64,7 +64,7 @@ public extension CharactersRouter.Endpoint.Character {
             
             switch result {
             case .success(let wrapper):
-                success(wrapper)
+                success(wrapper.data)
                 
             case .failure(let error):
                 failure(error)
