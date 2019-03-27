@@ -19,6 +19,7 @@
 		2A25AE7C224BE8A800326CCA /* SummariesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A25AE7A224BE8A800326CCA /* SummariesTableViewCell.xib */; };
 		2A25AE7E224BF0F700326CCA /* AppNavigationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE7D224BF0F700326CCA /* AppNavigationRouter.swift */; };
 		2A25AE80224BFAD800326CCA /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE7F224BFAD800326CCA /* NavigationBarExtension.swift */; };
+		2A25AE82224C038800326CCA /* RequestCachingAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A25AE81224C038800326CCA /* RequestCachingAdapter.swift */; };
 		2A6A08B52244D9A5002DC0C9 /* MarvelAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6A08B32244D9A5002DC0C9 /* MarvelAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2A6A08B82244D9A5002DC0C9 /* MarvelAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; };
 		2A6A08B92244D9A5002DC0C9 /* MarvelAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -167,6 +168,7 @@
 		2A25AE7A224BE8A800326CCA /* SummariesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SummariesTableViewCell.xib; sourceTree = "<group>"; };
 		2A25AE7D224BF0F700326CCA /* AppNavigationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationRouter.swift; sourceTree = "<group>"; };
 		2A25AE7F224BFAD800326CCA /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
+		2A25AE81224C038800326CCA /* RequestCachingAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCachingAdapter.swift; sourceTree = "<group>"; };
 		2A6A08AA2244D778002DC0C9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
 		2A6A08AB2244D778002DC0C9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		2A6A08B12244D9A5002DC0C9 /* MarvelAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -322,6 +324,7 @@
 				2A6A099422466778002DC0C9 /* WebserviceManager.swift */,
 				2A25AE68224BC82500326CCA /* NonHTTPResponseAdapter.swift */,
 				2A6A099022466778002DC0C9 /* HTTPRequestRouter.swift */,
+				2A25AE81224C038800326CCA /* RequestCachingAdapter.swift */,
 				2A6A0A8E2247D463002DC0C9 /* Webservices */,
 				2A6A09C522466B74002DC0C9 /* Routers */,
 				2A6A09A5224669F6002DC0C9 /* Authentication */,
@@ -951,6 +954,7 @@
 				2A6A09C422466B52002DC0C9 /* StoriesRouter.swift in Sources */,
 				2A6A09A3224669E6002DC0C9 /* Secrets.swift in Sources */,
 				2A6A0A8D2247D401002DC0C9 /* StoriesOfCharacterWebservices.swift in Sources */,
+				2A25AE82224C038800326CCA /* RequestCachingAdapter.swift in Sources */,
 				2A6A09D222466CDB002DC0C9 /* SeriesOfCharacterEndpoint.swift in Sources */,
 				2A6A094822461F9A002DC0C9 /* Container.swift in Sources */,
 				2A6A099B22466778002DC0C9 /* WebserviceManager.swift in Sources */,

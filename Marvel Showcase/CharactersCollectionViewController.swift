@@ -37,6 +37,11 @@ class CharactersCollectionViewController: UICollectionViewController {
         collectionView.register(CharacterOverviewCollectionViewCell.self, forCellWithReuseIdentifier: CharacterOverviewCollectionViewCell.identifier)
         
         getInitialCharacters()
+        setupCollectionViewHighlighting()
+    }
+    
+    private func setupCollectionViewHighlighting() {
+        collectionView.delaysContentTouches = false
     }
     
     private func getInitialCharacters() {

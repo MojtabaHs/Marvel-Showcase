@@ -64,13 +64,23 @@ extension RequestAuthenticationAdapter {
     
     static var bundle: Bundle { return Bundle(for: self) }
     
-    /// API key is public and there is no need for encryption.
     static let shared: RequestAuthenticationAdapter = {
         
         let authentication = Authentication(
             privateKey: Secrets.privateKey,
             publicKey: Secrets.publicKey
         )
+        
+        return RequestAuthenticationAdapter(authentication: authentication)
+    }()
+    
+    static let cachableShared: RequestAuthenticationAdapter = {
+        
+        let authentication = Authentication(
+            privateKey: Secrets.privateKey,
+            publicKey: Secrets.publicKey
+        )
+        authentication.staticTimestamp = true
         
         return RequestAuthenticationAdapter(authentication: authentication)
     }()

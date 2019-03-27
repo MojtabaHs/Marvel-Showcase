@@ -59,6 +59,5 @@ public extension HTTPResponseHandler {
         } catch {
             return failure(nil, error)
         }
-        
     }
 }
