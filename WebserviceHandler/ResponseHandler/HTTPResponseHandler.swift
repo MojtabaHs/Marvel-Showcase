@@ -18,20 +18,20 @@ public protocol ResponseAdapter {
 
 public protocol HTTPResponseHandler {
     var jsonParser: JSONParser { get }
-    var urlResponseAdapters: [ResponseAdapter] { get }
+    var responseAdapters: [ResponseAdapter] { get }
     func handleResponse<T: Decodable, U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void)
 }
 
 public extension HTTPResponseHandler {
     
-    public var urlResponseAdapters: [ResponseAdapter] { return [] }
+    public var responseAdapters: [ResponseAdapter] { return [] }
     
     public func handleResponse<T: Decodable, U: Decodable>(data: Data?, response: URLResponse?, error: Error?, success: @escaping (T?) -> Void, failure: @escaping (U?, Error?) -> Void) {
         
         let originalResponse = (data: data, response: response, error: error)
         
         var adaptedResponse: (data: Data?, response: URLResponse?, error: Error?)
-        for adapter in urlResponseAdapters {
+        for adapter in responseAdapters {
             adaptedResponse = adapter.adaptedResponse(data: data, response: response, error: error)
         }
         

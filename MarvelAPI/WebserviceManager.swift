@@ -13,7 +13,7 @@
 import WebserviceHandler
 
 public class WebserviceManager: WebserviceHandler.WebserviceManager {
-
+    
     var urlParametersEncoder = JSONEncoder()
     
     public func resumeDataTask<T: HTTPRequestRouter>(
@@ -31,12 +31,15 @@ public extension WebserviceManager {
     public static let shared: WebserviceManager = {
         let requestManager = RequestManager.default
         requestManager.urlRequestAdapters = [RequestAuthenticationAdapter.shared]
-
+        
+        let responseManager = ResponseManager.default
+        responseManager.responseAdapters = [NonHTTPResponseResponseAdapter.shared]
+        
         let webserviceManager = WebserviceManager(
             requestHandler: requestManager,
-            responseHandler: ResponseManager.default
+            responseHandler: responseManager
         )
-
+        
         return webserviceManager
     }()
 }

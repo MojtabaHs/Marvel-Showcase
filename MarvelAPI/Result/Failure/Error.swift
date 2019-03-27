@@ -17,7 +17,7 @@ public extension Result {
     /// If a call to an API endpoint fails, the API will return an error object.
     ///
     /// The API will also send an HTTP status code equal to the code attribute of the returned error object.
-    public struct Error: Decodable & Equatable {
+    public struct Error: Codable & Equatable {
         
         /// The http status code of the error
         public let code: Int?

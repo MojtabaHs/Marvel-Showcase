@@ -47,3 +47,5 @@ extension Result: Decodable & Equatable {
         }
     }
 }
+
+struct DontCareEntity: EntityType { }

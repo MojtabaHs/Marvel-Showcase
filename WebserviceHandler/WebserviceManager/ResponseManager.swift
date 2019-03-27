@@ -14,11 +14,13 @@ import Foundation
 
 open class ResponseManager: HTTPResponseHandler {
     
-    public init(jsonParser: JSONParser) {
+    public init(jsonParser: JSONParser, responseAdapters: [ResponseAdapter] = []) {
         self.jsonParser = jsonParser
+        self.responseAdapters = responseAdapters
     }
     
     open var jsonParser: JSONParser
+    open var responseAdapters: [ResponseAdapter]
 }
 
 extension ResponseManager {
