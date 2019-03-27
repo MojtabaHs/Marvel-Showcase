@@ -17,7 +17,7 @@ public extension CharactersRouter.Endpoint.Characters {
     public static func get(nameStartsWith namePrefix: String? = nil,
                            limit: Int? = nil,
                            offset: Int? = nil,
-                           success: @escaping ([Entity.Core.Character]?) -> Void,
+                           success: @escaping (Result.Wrapper<Entity.Core.Character>) -> Void,
                            failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         let urlParameters = URLParameters(nameStartsWith: namePrefix,
@@ -30,8 +30,7 @@ public extension CharactersRouter.Endpoint.Characters {
             
             switch result {
             case .success(let wrapper):
-                let characters = wrapper.data?.results
-                success(characters)
+                success(wrapper)
                 
             case .failure(let error):
                 failure(error)
@@ -39,7 +38,7 @@ public extension CharactersRouter.Endpoint.Characters {
         }
     }
     
-    public func get(success: @escaping ([Entity.Core.Character]?) -> Void,
+    public func get(success: @escaping (Result.Wrapper<Entity.Core.Character>) -> Void,
                     failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         return try WebserviceManager.shared.resumeDataTask(router: self) { result in
@@ -47,8 +46,7 @@ public extension CharactersRouter.Endpoint.Characters {
             
             switch result {
             case .success(let wrapper):
-                let characters = wrapper.data?.results
-                success(characters)
+                success(wrapper)
                 
             case .failure(let error):
                 failure(error)
