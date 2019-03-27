@@ -18,6 +18,8 @@ class CharactersCollectionViewController: UICollectionViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle { return .lightContent }
     
     private var getInitialCharactersDataDask: URLSessionDataTask?
+    private var getMoreCharactersDataDask: URLSessionDataTask?
+    
     private var characters: [MarvelAPI.Entity.Core.Character]? {
         didSet {
             OperationQueue.main.addOperation {
@@ -25,6 +27,10 @@ class CharactersCollectionViewController: UICollectionViewController {
             }
         }
     }
+    
+    private var total: Int?
+    private var limit: Int? = 20 // For the shake of the assignment
+    private var offset: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,8 +44,32 @@ class CharactersCollectionViewController: UICollectionViewController {
     private func getInitialCharacters() {
         do {
             getInitialCharactersDataDask = try MarvelAPI.CharactersRouter.Endpoint.Characters.get(
-                success: { characters in
-                    self.characters = characters
+                success: { container in
+                    self.getMoreCharactersDataDask?.cancel()
+                    
+                    self.characters = container?.results
+                    self.total = container?.total
+                    self.limit = container?.limit
+                    self.offset = (container?.offset ?? 0) + (container?.count ?? 0)
+            },
+                failure: { error in
+                    print(error)
+            })
+        } catch {
+            print(error)
+        }
+    }
+    
+    private func getMoreCharacters() {
+        do {
+            getMoreCharactersDataDask = try MarvelAPI.CharactersRouter.Endpoint.Characters.get(
+                limit: limit,
+                offset: offset,
+                success: { container in
+                    self.characters?.append(contentsOf: container?.results ?? [])
+                    self.total = container?.total
+                    self.limit = container?.limit
+                    self.offset = (container?.offset ?? 0) + (container?.count ?? 0)
             },
                 failure: { error in
                     print(error)
@@ -68,4 +98,22 @@ extension CharactersCollectionViewController {
     }
 }
 
+extension CharactersCollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard collectionView.numberOfItems(inSection: indexPath.section) - 3 < indexPath.row else { return }
+        
+        guard (total ?? 0) > (characters?.count ?? 0) else { return }
+        guard getMoreCharactersDataDask?.isComplete != false else { return }
+        getMoreCharacters()
+    }
+}
+
 extension CharactersCollectionViewController: NibInitializable { }
+
+extension URLSessionDataTask {
+    var isComplete: Bool {
+        guard error == nil else { return true }
+        guard response == nil else { return true }
+        return false
+    }
+}
