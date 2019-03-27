@@ -14,11 +14,11 @@ import Foundation
 
 public extension CharactersRouter.Endpoint.Characters {
     
-    public func get(nameStartsWith namePrefix: String? = nil,
-                    limit: Int? = nil,
-                    offset: Int? = nil,
-                    success: @escaping (Entity.Core.Character?) -> Void,
-                    failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
+    public static func get(nameStartsWith namePrefix: String? = nil,
+                           limit: Int? = nil,
+                           offset: Int? = nil,
+                           success: @escaping ([Entity.Core.Character]?) -> Void,
+                           failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         let urlParameters = URLParameters(nameStartsWith: namePrefix,
                                           limit: limit,
@@ -30,8 +30,25 @@ public extension CharactersRouter.Endpoint.Characters {
             
             switch result {
             case .success(let wrapper):
-                let character = wrapper.data?.results?.first
-                success(character)
+                let characters = wrapper.data?.results
+                success(characters)
+                
+            case .failure(let error):
+                failure(error)
+            }
+        }
+    }
+    
+    public func get(success: @escaping ([Entity.Core.Character]?) -> Void,
+                    failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
+        
+        return try WebserviceManager.shared.resumeDataTask(router: self) { result in
+            guard let result = result else { return assertionFailure("Unknown response")}
+            
+            switch result {
+            case .success(let wrapper):
+                let characters = wrapper.data?.results
+                success(characters)
                 
             case .failure(let error):
                 failure(error)

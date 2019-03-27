@@ -54,11 +54,11 @@ public extension CharactersRouter.Endpoint.ComicsOfCharacter {
 // TODO: Move coresponding extesntion here after swift bug fixed
 public extension CharactersRouter.Endpoint.ComicsOfCharacter {
     
-    public func get(characterId: Int,
-                    limit: Int? = nil,
-                    offset: Int? = nil,
-                    success: @escaping (Entity.Core.Comic?) -> Void,
-                    failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
+    public static func get(characterId: Int,
+                           limit: Int? = nil,
+                           offset: Int? = nil,
+                           success: @escaping ([Entity.Core.Comic]?) -> Void,
+                           failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         let urlParameters = URLParameters(limit: limit,
                                           offset: offset)
@@ -71,8 +71,25 @@ public extension CharactersRouter.Endpoint.ComicsOfCharacter {
             
             switch result {
             case .success(let wrapper):
-                let character = wrapper.data?.results?.first
-                success(character)
+                let comics = wrapper.data?.results
+                success(comics)
+                
+            case .failure(let error):
+                failure(error)
+            }
+        }
+    }
+    
+    public func get(success: @escaping ([Entity.Core.Comic]?) -> Void,
+                    failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
+        
+        return try WebserviceManager.shared.resumeDataTask(router: self) { result in
+            guard let result = result else { return assertionFailure("Unknown response")}
+            
+            switch result {
+            case .success(let wrapper):
+                let comics = wrapper.data?.results
+                success(comics)
                 
             case .failure(let error):
                 failure(error)

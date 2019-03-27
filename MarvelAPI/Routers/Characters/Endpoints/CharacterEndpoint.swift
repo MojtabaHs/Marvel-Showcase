@@ -38,12 +38,29 @@ public extension CharactersRouter.Endpoint {
 // TODO: Move coresponding extesntion here after swift bug fixed
 public extension CharactersRouter.Endpoint.Character {
     
-    public func get(characterId: Int,
-                    success: @escaping (Entity.Core.Character?) -> Void,
-                    failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
+    public static func get(characterId: Int,
+                           success: @escaping (Entity.Core.Character?) -> Void,
+                           failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
         
         let router = CharactersRouter.Endpoint.Character(id: characterId)
         return try WebserviceManager.shared.resumeDataTask(router: router) { result in
+            guard let result = result else { return assertionFailure("Unknown response")}
+            
+            switch result {
+            case .success(let wrapper):
+                let character = wrapper.data?.results?.first
+                success(character)
+                
+            case .failure(let error):
+                failure(error)
+            }
+        }
+    }
+    
+    public func get(success: @escaping (Entity.Core.Character?) -> Void,
+                    failure: @escaping (Result.Error) -> Void) throws -> URLSessionDataTask {
+        
+        return try WebserviceManager.shared.resumeDataTask(router: self) { result in
             guard let result = result else { return assertionFailure("Unknown response")}
             
             switch result {
