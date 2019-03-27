@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CharacterOverviewView" customModule="Marvel_Showcase" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="267" height="363"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder-Character" translatesAutoresizingMaskIntoConstraints="NO" id="dzB-IL-GDr">
+                    <rect key="frame" x="0.0" y="0.0" width="267" height="229"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="dzB-IL-GDr" secondAttribute="height" multiplier="1:1" priority="750" id="xlL-V3-FxJ"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HeaderGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Iwu-rw-dQ7">
+                    <rect key="frame" x="0.0" y="165" width="267" height="64"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSI-Ks-PJe">
+                    <rect key="frame" x="24" y="229" width="219" height="38"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;#TITLE#&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXa-bw-gmQ">
+                            <rect key="frame" x="0.0" y="9.5" width="142.5" height="40"/>
+                            <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="40"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QDl-BM-t6V">
+                            <rect key="frame" x="181" y="0.0" width="38" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="QDl-BM-t6V" secondAttribute="height" multiplier="1:1" id="LlC-xd-ppH"/>
+                            </constraints>
+                            <state key="normal" image="Favorite-Outlined"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="QDl-BM-t6V" firstAttribute="top" secondItem="OSI-Ks-PJe" secondAttribute="top" id="1Kq-DY-IfW"/>
+                        <constraint firstItem="QDl-BM-t6V" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rXa-bw-gmQ" secondAttribute="trailing" constant="8" id="57z-da-t17"/>
+                        <constraint firstAttribute="height" constant="38" id="I15-WQ-8XV"/>
+                        <constraint firstItem="QDl-BM-t6V" firstAttribute="bottom" secondItem="rXa-bw-gmQ" secondAttribute="baseline" id="P7v-GT-asB"/>
+                        <constraint firstItem="rXa-bw-gmQ" firstAttribute="leading" secondItem="OSI-Ks-PJe" secondAttribute="leading" id="ahC-rW-ARC"/>
+                        <constraint firstAttribute="trailing" secondItem="QDl-BM-t6V" secondAttribute="trailing" id="bYe-IO-25m"/>
+                        <constraint firstAttribute="bottom" secondItem="QDl-BM-t6V" secondAttribute="bottom" id="dcC-4S-4qV"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7ru-J9-via">
+                    <rect key="frame" x="0.0" y="283" width="267" height="68"/>
+                    <color key="backgroundColor" red="0.074509803920000006" green="0.1137254902" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="68" id="0fj-D9-qYk"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3uS-kR-954" customClass="RelationCountCollectionViewFlowLayout" customModule="Marvel_Showcase" customModuleProvider="target">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h3Z-2d-xQn">
+                    <rect key="frame" x="24" y="362" width="219" height="1"/>
+                    <color key="backgroundColor" red="0.12549019607843137" green="0.16078431372549021" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="eAr-e4-kKL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.074509803921568626" green="0.11372549019607843" blue="0.16078431372549018" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="7ru-J9-via" secondAttribute="bottom" constant="12" id="0km-oR-iaM"/>
+                <constraint firstItem="7ru-J9-via" firstAttribute="top" secondItem="OSI-Ks-PJe" secondAttribute="bottom" constant="16" id="1d2-Wf-OsC"/>
+                <constraint firstAttribute="bottom" secondItem="h3Z-2d-xQn" secondAttribute="bottom" id="3KG-QQ-IYi"/>
+                <constraint firstItem="Iwu-rw-dQ7" firstAttribute="trailing" secondItem="dzB-IL-GDr" secondAttribute="trailing" id="3ld-jh-Fla"/>
+                <constraint firstItem="Iwu-rw-dQ7" firstAttribute="bottom" secondItem="dzB-IL-GDr" secondAttribute="bottom" id="8hU-rY-d0V"/>
+                <constraint firstItem="7ru-J9-via" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="Cd8-7k-Anp"/>
+                <constraint firstItem="dzB-IL-GDr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="QKb-cz-Pi1"/>
+                <constraint firstItem="OSI-Ks-PJe" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="URg-xL-mFK"/>
+                <constraint firstAttribute="trailing" secondItem="OSI-Ks-PJe" secondAttribute="trailing" constant="24" id="Xpz-1s-s9R"/>
+                <constraint firstItem="7ru-J9-via" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cQj-NP-b88"/>
+                <constraint firstAttribute="trailing" secondItem="h3Z-2d-xQn" secondAttribute="trailing" constant="24" id="eri-27-WQo"/>
+                <constraint firstAttribute="trailing" secondItem="dzB-IL-GDr" secondAttribute="trailing" id="jeG-ZD-Y1j"/>
+                <constraint firstItem="dzB-IL-GDr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kxQ-p8-yQ3"/>
+                <constraint firstItem="Iwu-rw-dQ7" firstAttribute="leading" secondItem="dzB-IL-GDr" secondAttribute="leading" id="n7p-Lz-OEk"/>
+                <constraint firstItem="OSI-Ks-PJe" firstAttribute="top" secondItem="dzB-IL-GDr" secondAttribute="bottom" id="nBK-i8-IDF"/>
+                <constraint firstItem="h3Z-2d-xQn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="qgu-eb-JUS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="characterImageView" destination="dzB-IL-GDr" id="4jb-4n-suP"/>
+                <outlet property="favoriteButton" destination="QDl-BM-t6V" id="msM-dx-O8u"/>
+                <outlet property="relationsCollectionView" destination="7ru-J9-via" id="4D7-5R-clR"/>
+                <outlet property="titleLabel" destination="rXa-bw-gmQ" id="XXa-A8-E3s"/>
+            </connections>
+            <point key="canvasLocation" x="-32.799999999999997" y="-26.53673163418291"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Favorite-Outlined" width="38" height="38"/>
+        <image name="HeaderGradient" width="14" height="64"/>
+        <image name="Placeholder-Character" width="360" height="360"/>
+    </resources>
+</document>
